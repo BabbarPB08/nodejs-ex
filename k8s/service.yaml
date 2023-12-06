@@ -2,8 +2,8 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: nodejs-test-app
-  name: nodejs-test-app
+    app: nodejs-ex-git-00001-deployment
+  name: nodejs-ex-git-00001-deployment
 spec:
   type: ClusterIP
   ports:
@@ -11,4 +11,4 @@ spec:
       port: 9000
       targetPort: 9000
   selector:
-    app: nodejs-test-app
+    app: nodejs-ex-git-00001-deployment

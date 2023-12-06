@@ -2,22 +2,22 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: nodejs-test-app
-  name: nodejs-test-app
+    app: nodejs-ex-git-00001-deployment
+  name: nodejs-ex-git-00001-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nodejs-test-app
+      app: nodejs-ex-git-00001-deployment
   template:
     metadata:
       labels:
-        app: nodejs-test-app
+        app: nodejs-ex-git-00001-deployment
     spec:
       containers:
         - image: quay.io/openshift-pipeline/vote-api:latest
           imagePullPolicy: Always
-          name: nodejs-test-app
+          name: nodejs-ex-git-00001-deployment
           ports:
             - containerPort: 9000
               protocol: TCP
